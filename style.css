@@ -1,3 +1,4 @@
+/* === General Body === */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -6,12 +7,14 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Bordeaux color palette */
+/* === Bordeaux Colors === */
 :root {
   --bordeaux: #7a1530;
   --bordeaux-dark: #5a0f23;
+  --bordeaux-light: #a2344d;
 }
 
+/* === Header === */
 header {
   background-color: var(--bordeaux);
   color: white;
@@ -23,6 +26,7 @@ header h1 {
   padding-bottom: 0.5rem;
 }
 
+/* === Navigation Menu === */
 nav {
   margin-top: 0.5rem;
 }
@@ -32,12 +36,23 @@ nav a {
   text-decoration: none;
   margin: 0 0.75rem;
   font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  transition: background-color 0.2s;
+  border-radius: 5px;
 }
 
+/* Hover effect */
 nav a:hover {
-  text-decoration: underline;
+  background-color: var(--bordeaux-dark);
 }
 
+/* Active page */
+nav a.active {
+  background-color: black; /* current page highlight */
+  color: white;
+}
+
+/* === Main Content === */
 main {
   padding: 2rem;
 }
@@ -46,7 +61,7 @@ main h2 {
   margin-bottom: 1rem;
 }
 
-/* Buttons & links */
+/* === Links / Buttons === */
 a {
   display: inline-block;
   margin-top: 1rem;
@@ -55,15 +70,18 @@ a {
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  transition: background-color 0.2s;
 }
 
 a:hover {
   background-color: var(--bordeaux-dark);
 }
 
+/* === Footer === */
 footer {
   margin-top: 3rem;
   padding: 1rem 0;
   background-color: var(--bordeaux-dark);
   color: white;
 }
+
