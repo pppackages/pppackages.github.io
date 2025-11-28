@@ -9,11 +9,35 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 2rem 0;
+  padding: 1.5rem 0 1rem 0;
+}
+
+header h1 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
   padding: 2rem;
+}
+
+main h2 {
+  margin-bottom: 1rem;
 }
 
 a {
@@ -26,8 +50,12 @@ a {
   border-radius: 5px;
 }
 
+a:hover {
+  background-color: #555;
+}
+
 footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1rem 0;
   background-color: #222;
   color: white;
