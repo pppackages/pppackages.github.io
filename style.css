@@ -6,8 +6,14 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Bordeaux color palette */
+:root {
+  --bordeaux: #7a1530;
+  --bordeaux-dark: #5a0f23;
+}
+
 header {
-  background-color: #333;
+  background-color: var(--bordeaux);
   color: white;
   padding: 1.5rem 0 1rem 0;
 }
@@ -40,23 +46,24 @@ main h2 {
   margin-bottom: 1rem;
 }
 
+/* Buttons & links */
 a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #333;
+  background-color: var(--bordeaux);
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 a:hover {
-  background-color: #555;
+  background-color: var(--bordeaux-dark);
 }
 
 footer {
   margin-top: 3rem;
   padding: 1rem 0;
-  background-color: #222;
+  background-color: var(--bordeaux-dark);
   color: white;
 }
