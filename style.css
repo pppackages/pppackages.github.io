@@ -117,4 +117,21 @@ footer {
   color: #555;
 }
 
+/* === Bibliography Links Override === */
+.bibliography a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--bordeaux);
+  text-decoration: underline;
+  border-radius: 0;
+}
+
+.bibliography a:hover {
+  background-color: transparent;
+  color: var(--bordeaux-dark);
+  text-decoration: underline;
+}
+
 
