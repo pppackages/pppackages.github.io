@@ -48,7 +48,7 @@ nav a:hover {
 
 /* Active page */
 nav a.active {
-  background-color: black; /* current page highlight */
+  background-color: black;
   color: white;
 }
 
@@ -61,7 +61,7 @@ main h2 {
   margin-bottom: 1rem;
 }
 
-/* === Links / Buttons === */
+/* === Global Links / Buttons === */
 a {
   display: inline-block;
   margin-top: 1rem;
@@ -85,13 +85,12 @@ footer {
   color: white;
 }
 
+/* === Bibliography Section === */
 .bibliography {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid #ddd;
 }
-
-
 
 .bibliography h2 {
   font-size: 1.4rem;
@@ -108,7 +107,7 @@ footer {
   line-height: 1.6;
   padding-left: 1.2rem;
   text-indent: -1.2rem;
-  font-size: 0.92rem;   /* slightly smaller than normal text */
+  font-size: 0.92rem;
 }
 
 .bibliography li::before {
@@ -117,21 +116,22 @@ footer {
   color: #555;
 }
 
-/* === Bibliography Links Override === */
+/* === HARD OVERRIDE: NO BOXES IN BIBLIOGRAPHY LINKS === */
 .bibliography a {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  color: var(--bordeaux);
-  text-decoration: underline;
-  border-radius: 0;
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: var(--bordeaux) !important;
+  text-decoration: underline !important;
+  border-radius: 0 !important;
+  transition: none !important;
 }
 
 .bibliography a:hover {
-  background-color: transparent;
-  color: var(--bordeaux-dark);
-  text-decoration: underline;
+  background-color: transparent !important;
+  color: var(--bordeaux-dark) !important;
+  text-decoration: underline !important;
 }
 
 
