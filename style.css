@@ -1,3 +1,23 @@
+/* === Global Layout Width (Desktop + Mobile) === */
+header,
+main,
+section.bibliography,
+footer {
+  width: 74%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile override */
+@media (max-width: 900px) {
+  header,
+  main,
+  section.bibliography,
+  footer {
+    width: 92%;
+  }
+}
+
 /* === General Body === */
 body {
   font-family: Arial, sans-serif;
@@ -5,6 +25,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 /* === Bordeaux Colors === */
@@ -133,5 +155,4 @@ footer {
   color: var(--bordeaux-dark) !important;
   text-decoration: underline !important;
 }
-
 
