@@ -6,30 +6,38 @@ body {
   text-align: left;                
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* grey behind margins, but will only appear outside sections */
+  background-color: #f4f4f4; /* gray only outside sections */
   line-height: 1.65;
   font-size: 16px;
   color: #222;
 }
 
 /* =========================================================
-   HEADER (FULL WIDTH BORDO) 
+   COLOR PALETTE
 ========================================================= */
-header {
-  width: 100%;                       /* full width background */
-  background-color: var(--bordeaux);
-  color: white;
-  padding: 1.5rem 0 1.2rem 0;
+:root {
+  --bordeaux: #7a1530;
+  --bordeaux-dark: #5a0f23;
+  --bordeaux-light: #a2344d;
 }
 
-/* Inner content constrained to 74% */
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+  width: 100%;                       /* full-width background */
+  background-color: var(--bordeaux);
+  color: white;
+  padding: 1.5rem 0;
+}
+
+/* Inner container for centered content */
 header .inner {
   width: 74%;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Title inside inner container */
 header h1 {
   margin: 0 0 0.75rem 0;
   text-align: left;
@@ -40,11 +48,10 @@ header h1 {
 ========================================================= */
 nav {
   display: flex;
-  justify-content: center;         
+  justify-content: center;
   gap: 1rem;
 }
 
-/* normal nav links */
 nav a {
   color: white;
   text-decoration: none;
@@ -58,7 +65,7 @@ nav a:hover {
   background-color: var(--bordeaux-dark);
 }
 
-/* active page box */
+/* Active page highlighted */
 nav a.active {
   background-color: var(--bordeaux-dark);
   color: white;
@@ -66,19 +73,18 @@ nav a.active {
 }
 
 /* =========================================================
-   MAIN CONTENT (WHITE BACKGROUND FULL WIDTH)
+   MAIN CONTENT
 ========================================================= */
 main {
-  width: 100%;                       /* full width background */
+  width: 100%;
   background-color: white;
-  padding: 2.5rem 0;                 /* top/bottom padding full width */
+  padding: 2.5rem 0;
 }
 
-/* Inner container for text */
 main .inner {
   width: 74%;
   margin: 0 auto;
-  padding: 0 2rem;                   /* side padding for smaller screens */
+  padding: 0 2rem;
 }
 
 main h2 {
@@ -91,7 +97,6 @@ main p {
   margin-bottom: 1.2rem;
 }
 
-/* links/buttons inside main */
 main a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -108,7 +113,7 @@ main a:hover {
 }
 
 /* =========================================================
-   BIBLIOGRAPHY SECTION (WHITE BACKGROUND FULL WIDTH)
+   BIBLIOGRAPHY
 ========================================================= */
 section.bibliography {
   width: 100%;
@@ -117,7 +122,6 @@ section.bibliography {
   border-top: 1px solid #ddd;
 }
 
-/* Inner container */
 section.bibliography .inner {
   width: 74%;
   margin: 0 auto;
@@ -150,7 +154,7 @@ section.bibliography .inner {
   color: #555;
 }
 
-/* Hard override: no button style in bibliography links */
+/* No button style in bibliography links */
 .bibliography a {
   display: inline !important;
   margin: 0 !important;
@@ -167,7 +171,7 @@ section.bibliography .inner {
 }
 
 /* =========================================================
-   FOOTER (FULL WIDTH)
+   FOOTER
 ========================================================= */
 footer {
   width: 100%;
@@ -177,7 +181,6 @@ footer {
   padding: 1rem 0;
 }
 
-/* Inner container for footer content */
 footer .inner {
   width: 74%;
   margin: 0 auto;
