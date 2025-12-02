@@ -1,4 +1,7 @@
-/* === Global Layout Width (Desktop + Mobile) === */
+/* =========================================================
+   GLOBAL LAYOUT WIDTH (DESKTOP + MOBILE)
+========================================================= */
+
 header,
 main,
 section.bibliography,
@@ -18,49 +21,65 @@ footer {
   }
 }
 
-/* === General Body === */
+/* =========================================================
+   GENERAL BODY
+========================================================= */
+
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
+  text-align: left;                /* ALL TEXT LEFT-ALIGNED */
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  line-height: 1.6;
+  line-height: 1.65;
   font-size: 16px;
+  color: #222;
 }
 
-/* === Bordeaux Colors === */
+/* =========================================================
+   BORDEAUX COLOR PALETTE
+========================================================= */
+
 :root {
   --bordeaux: #7a1530;
   --bordeaux-dark: #5a0f23;
   --bordeaux-light: #a2344d;
 }
 
-/* === Header === */
+/* =========================================================
+   HEADER
+========================================================= */
+
 header {
   background-color: var(--bordeaux);
   color: white;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.5rem 2rem 1.2rem 2rem;
 }
 
+/* Title stays left-aligned */
 header h1 {
-  margin: 0;
-  padding-bottom: 0.5rem;
+  margin: 0 0 0.75rem 0;
+  text-align: left;
 }
 
-/* === Navigation Menu === */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 nav {
-  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;         /* Center menu horizontally */
+  gap: 1rem;
 }
 
+/* Normal menu items */
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 0.75rem;
   font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  transition: background-color 0.2s;
-  border-radius: 5px;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 /* Hover effect */
@@ -68,26 +87,43 @@ nav a:hover {
   background-color: var(--bordeaux-dark);
 }
 
-/* Active page */
+/* =========================================================
+   ACTIVE PAGE (YOUR REQUESTED BOX EFFECT)
+========================================================= */
+
 nav a.active {
-  background-color: black;
+  background-color: var(--bordeaux-dark);  /* Darker box */
   color: white;
+  box-shadow: inset 0 0 0 2px white;        /* Framed look */
 }
 
-/* === Main Content === */
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
 main {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
+  background-color: white;
 }
 
 main h2 {
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: var(--bordeaux-dark);
 }
 
-/* === Global Links / Buttons === */
-a {
+main p {
+  margin-bottom: 1.2rem;
+}
+
+/* =========================================================
+   GLOBAL LINKS (BUTTON STYLE)
+========================================================= */
+
+main a {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.9rem;
   background-color: var(--bordeaux);
   color: white;
   text-decoration: none;
@@ -95,41 +131,52 @@ a {
   transition: background-color 0.2s;
 }
 
-a:hover {
+main a:hover {
   background-color: var(--bordeaux-dark);
 }
 
-/* === Footer === */
+/* =========================================================
+   FOOTER
+========================================================= */
+
 footer {
   margin-top: 3rem;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   background-color: var(--bordeaux-dark);
   color: white;
+  font-size: 0.9rem;
+  text-align: left;
 }
 
-/* === Bibliography Section === */
+/* =========================================================
+   BIBLIOGRAPHY SECTION
+========================================================= */
+
 .bibliography {
   margin-top: 3rem;
-  padding-top: 1.5rem;
+  padding: 2rem;
   border-top: 1px solid #ddd;
+  background-color: white;
 }
 
 .bibliography h2 {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--bordeaux-dark);
 }
 
 .bibliography ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .bibliography li {
   margin-bottom: 1rem;
-  line-height: 1.6;
+  line-height: 1.65;
   padding-left: 1.2rem;
   text-indent: -1.2rem;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
 .bibliography li::before {
@@ -138,7 +185,10 @@ footer {
   color: #555;
 }
 
-/* === HARD OVERRIDE: NO BOXES IN BIBLIOGRAPHY LINKS === */
+/* =========================================================
+   HARD OVERRIDE: NO BUTTON STYLE IN BIBLIOGRAPHY LINKS
+========================================================= */
+
 .bibliography a {
   display: inline !important;
   margin: 0 !important;
