@@ -1,62 +1,35 @@
 /* =========================================================
-   GLOBAL LAYOUT WIDTH (DESKTOP + MOBILE)
+   GLOBAL BODY
 ========================================================= */
-
-header,
-main,
-section.bibliography,
-footer {
-  width: 74%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Mobile override */
-@media (max-width: 900px) {
-  header,
-  main,
-  section.bibliography,
-  footer {
-    width: 92%;
-  }
-}
-
-/* =========================================================
-   GENERAL BODY
-========================================================= */
-
 body {
   font-family: Arial, sans-serif;
-  text-align: left;                /* ALL TEXT LEFT-ALIGNED */
+  text-align: left;                
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4; /* grey behind margins, but will only appear outside sections */
   line-height: 1.65;
   font-size: 16px;
   color: #222;
 }
 
 /* =========================================================
-   BORDEAUX COLOR PALETTE
+   HEADER (FULL WIDTH BORDO) 
 ========================================================= */
-
-:root {
-  --bordeaux: #7a1530;
-  --bordeaux-dark: #5a0f23;
-  --bordeaux-light: #a2344d;
-}
-
-/* =========================================================
-   HEADER
-========================================================= */
-
 header {
+  width: 100%;                       /* full width background */
   background-color: var(--bordeaux);
   color: white;
-  padding: 1.5rem 2rem 1.2rem 2rem;
+  padding: 1.5rem 0 1.2rem 0;
 }
 
-/* Title stays left-aligned */
+/* Inner content constrained to 74% */
+header .inner {
+  width: 74%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Title inside inner container */
 header h1 {
   margin: 0 0 0.75rem 0;
   text-align: left;
@@ -65,14 +38,13 @@ header h1 {
 /* =========================================================
    NAVIGATION
 ========================================================= */
-
 nav {
   display: flex;
-  justify-content: center;         /* Center menu horizontally */
+  justify-content: center;         
   gap: 1rem;
 }
 
-/* Normal menu items */
+/* normal nav links */
 nav a {
   color: white;
   text-decoration: none;
@@ -82,28 +54,31 @@ nav a {
   transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-/* Hover effect */
 nav a:hover {
   background-color: var(--bordeaux-dark);
 }
 
-/* =========================================================
-   ACTIVE PAGE (YOUR REQUESTED BOX EFFECT)
-========================================================= */
-
+/* active page box */
 nav a.active {
-  background-color: var(--bordeaux-dark);  /* Darker box */
+  background-color: var(--bordeaux-dark);
   color: white;
-  box-shadow: inset 0 0 0 2px white;        /* Framed look */
+  box-shadow: inset 0 0 0 2px white;
 }
 
 /* =========================================================
-   MAIN CONTENT
+   MAIN CONTENT (WHITE BACKGROUND FULL WIDTH)
 ========================================================= */
-
 main {
-  padding: 2.5rem 2rem;
+  width: 100%;                       /* full width background */
   background-color: white;
+  padding: 2.5rem 0;                 /* top/bottom padding full width */
+}
+
+/* Inner container for text */
+main .inner {
+  width: 74%;
+  margin: 0 auto;
+  padding: 0 2rem;                   /* side padding for smaller screens */
 }
 
 main h2 {
@@ -116,10 +91,7 @@ main p {
   margin-bottom: 1.2rem;
 }
 
-/* =========================================================
-   GLOBAL LINKS (BUTTON STYLE)
-========================================================= */
-
+/* links/buttons inside main */
 main a {
   display: inline-block;
   margin-top: 0.5rem;
@@ -136,27 +108,20 @@ main a:hover {
 }
 
 /* =========================================================
-   FOOTER
+   BIBLIOGRAPHY SECTION (WHITE BACKGROUND FULL WIDTH)
 ========================================================= */
-
-footer {
-  margin-top: 3rem;
-  padding: 1rem 2rem;
-  background-color: var(--bordeaux-dark);
-  color: white;
-  font-size: 0.9rem;
-  text-align: left;
+section.bibliography {
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
 }
 
-/* =========================================================
-   BIBLIOGRAPHY SECTION
-========================================================= */
-
-.bibliography {
-  margin-top: 3rem;
-  padding: 2rem;
-  border-top: 1px solid #ddd;
-  background-color: white;
+/* Inner container */
+section.bibliography .inner {
+  width: 74%;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .bibliography h2 {
@@ -185,10 +150,7 @@ footer {
   color: #555;
 }
 
-/* =========================================================
-   HARD OVERRIDE: NO BUTTON STYLE IN BIBLIOGRAPHY LINKS
-========================================================= */
-
+/* Hard override: no button style in bibliography links */
 .bibliography a {
   display: inline !important;
   margin: 0 !important;
@@ -201,8 +163,36 @@ footer {
 }
 
 .bibliography a:hover {
-  background-color: transparent !important;
   color: var(--bordeaux-dark) !important;
-  text-decoration: underline !important;
+}
+
+/* =========================================================
+   FOOTER (FULL WIDTH)
+========================================================= */
+footer {
+  width: 100%;
+  background-color: var(--bordeaux-dark);
+  color: white;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+/* Inner container for footer content */
+footer .inner {
+  width: 74%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =========================================================
+   MOBILE WIDTH ADJUSTMENT
+========================================================= */
+@media (max-width: 900px) {
+  header .inner,
+  main .inner,
+  section.bibliography .inner,
+  footer .inner {
+    width: 92%;
+  }
 }
 
