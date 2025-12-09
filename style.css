@@ -1,11 +1,18 @@
 /* =========================================================
    GLOBAL BODY
 ========================================================= */
-body {
-  font-family: Arial, sans-serif;
-  text-align: left;                
+html, body {
+  height: 100%;          /* ensure full height */
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;     /* full viewport height */
+  font-family: Arial, sans-serif;
+  text-align: left;                
   background-color: #f4f4f4; /* gray only outside sections */
   line-height: 1.65;
   font-size: 16px;
@@ -29,6 +36,10 @@ header {
   background-color: var(--bordeaux);
   color: white;
   padding: 1.5rem 0;
+  flex-shrink: 0;                    /* prevent shrinking */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Inner container for centered content */
@@ -79,6 +90,7 @@ main {
   width: 100%;
   background-color: white;
   padding: 2.5rem 0;
+  flex-grow: 1;             /* allow main to expand and push footer down */
 }
 
 main .inner {
@@ -154,7 +166,6 @@ section.bibliography .inner {
   color: #555;
 }
 
-/* No button style in bibliography links */
 .bibliography a {
   display: inline !important;
   margin: 0 !important;
@@ -179,11 +190,12 @@ footer {
   color: white;
   font-size: 0.9rem;
   padding: 1rem 0;
+  flex-shrink: 0;           /* prevent shrinking */
 }
 
 footer .inner {
-  width: 100%;        /* full width of footer */
-  text-align: center; /* center text */
+  width: 100%;
+  text-align: center;
   padding: 0 2rem;
 }
 
